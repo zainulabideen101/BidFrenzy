@@ -20,7 +20,7 @@ import java.util.HashMap;
 
 public class AddProduct extends AppCompatActivity {
 
-    private EditText productNameEdt,productCategoryEdt,productPriceEdt,productImageEdt,productDescriptionEdt;
+    private EditText productNameEdt,productCategoryEdt,productPriceEdt,productImageEdt,productDescriptionEdt,startbid;
     private Button addProductBtn;
     private ProgressBar loadingPB;
     private FirebaseFirestore db;
@@ -35,7 +35,7 @@ public class AddProduct extends AppCompatActivity {
         productImageEdt = findViewById(R.id.ProductImageLink);
         productDescriptionEdt = findViewById(R.id.ProductDescription);
         addProductBtn = findViewById(R.id.BtnAddProduct);
-        loadingPB = findViewById(R.id.PBloading);
+        startbid=findViewById(R.id.startbid);
         db = FirebaseFirestore.getInstance();
 
 
@@ -49,14 +49,14 @@ public class AddProduct extends AppCompatActivity {
                 String productImageLink = productImageEdt.getText().toString();
                 String productDescription = productDescriptionEdt.getText().toString();
                 String productID = productName;
+                String startbidd=startbid.getText().toString();
 
-
-                saveToFireStore(productID,productName, productCategory,productPrice,productImageLink,productDescription);
+                saveToFireStore(productID,productName, productCategory,productPrice,productImageLink,productDescription,startbidd);
             }
         });
     }
 
-    private void saveToFireStore(String productID,String productName,String productCategory,String productPrice,String productImageLink,String productDescription){
+    private void saveToFireStore(String productID,String productName,String productCategory,String productPrice,String productImageLink,String productDescription,String startbidd){
         if (!productName.isEmpty() && !productCategory.isEmpty() && !productPrice.isEmpty() && !productImageLink.isEmpty() && !productDescription.isEmpty()){
             HashMap<String,Object> map = new HashMap<>();
             map.put("productName", productName);
@@ -65,7 +65,7 @@ public class AddProduct extends AppCompatActivity {
             map.put("productImage", productImageLink);
             map.put("productDescription", productDescription);
             map.put("productID", productID);
-
+            map.put("StartBid",startbidd);
             db.collection("Products").document(productID).set(map)
                     .addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override

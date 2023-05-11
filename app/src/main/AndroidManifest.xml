@@ -42,9 +42,6 @@
             android:name=".CustomerCategories"
             android:exported="false" />
         <activity
-            android:name=".CustomerDashboard"
-            android:exported="false" />
-        <activity
             android:name=".Login"
             android:exported="false" />
         <activity

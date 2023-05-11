@@ -109,7 +109,7 @@ public class Payment extends AppCompatActivity {
                                     @Override
                                     public void onComplete(@NonNull Task<Void> task) {
 
-                                        Intent i = new Intent(Payment.this, CustomerDashboard.class);
+                                        Intent i = new Intent(Payment.this, AdminDashboard.class);
                                         startActivity(i);
                                         clearcart();
                                         Toast.makeText(Payment.this, "Order Placed Successfully", Toast.LENGTH_SHORT).show();

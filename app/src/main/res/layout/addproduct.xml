@@ -79,6 +79,21 @@
                 android:textColor="#FFFF"
                 android:textColorHint="#FFFF"
                 />
+            <EditText
+                android:id="@+id/startbid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/text_round"
+                android:importantForAutofill="no"
+                android:hint="Start Bid"
+                android:inputType="text"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:padding="15dp"
+                android:textColor="#FFFF"
+                android:textColorHint="#FFFF"
+                />
 
             <EditText
                 android:id="@+id/ProductDescription"

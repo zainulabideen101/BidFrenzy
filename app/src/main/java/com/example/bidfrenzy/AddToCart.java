@@ -72,7 +72,7 @@ public class AddToCart extends AppCompatActivity implements AddToCartRVAdapter.P
             @Override
             public void onClick(View view) {
                 if(cartitems.empty()){
-                    Intent i = new Intent(getApplicationContext(), CustomerDashboard.class);
+                    Intent i = new Intent(getApplicationContext(), AdminDashboard.class);
                     startActivity(i);
                 }
                 clearcart();
@@ -122,7 +122,7 @@ public class AddToCart extends AppCompatActivity implements AddToCartRVAdapter.P
     }
 
     public void BackArrow(View view){
-        startActivity(new Intent(getApplicationContext(), CustomerDashboard.class));
+        startActivity(new Intent(getApplicationContext(), AdminDashboard.class));
     }
 
     public void clearcart(){
@@ -135,7 +135,7 @@ public class AddToCart extends AppCompatActivity implements AddToCartRVAdapter.P
                             String a = snapshot.getId();
                             db.collection("Users").document(fAuth.getUid()).collection("CartList").document(a).delete();
                         }
-                        startActivity(new Intent(getApplicationContext(), CustomerDashboard.class));
+                        startActivity(new Intent(getApplicationContext(), AdminDashboard.class));
                         Toast.makeText(AddToCart.this,"Cart Cleared",Toast.LENGTH_SHORT).show();
                     }
                 }).addOnFailureListener(new OnFailureListener() {

@@ -108,7 +108,7 @@ public class ReviewSeller extends AppCompatActivity {
 
 
                 }else{
-                    Intent i = new Intent(getApplicationContext(), CustomerDashboard.class);
+                    Intent i = new Intent(getApplicationContext(), AdminDashboard.class);
                     startActivity(i);
                 }
             }

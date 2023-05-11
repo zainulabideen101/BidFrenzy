@@ -53,7 +53,7 @@ public class UserProfile extends AppCompatActivity {
                     String TypeResult = task.getResult().getString("UserType").trim();
 
                     if(TypeResult.equalsIgnoreCase("Customer")){
-                        startActivity(new Intent(UserProfile.this, CustomerDashboard.class));
+                        startActivity(new Intent(UserProfile.this, AdminDashboard.class));
                     }else{
                         startActivity(new Intent(UserProfile.this,AdminDashboard.class));
                     }
@@ -113,7 +113,7 @@ public class UserProfile extends AppCompatActivity {
 
 
                         }else{
-                            Intent i = new Intent(getApplicationContext(), CustomerDashboard.class);
+                            Intent i = new Intent(getApplicationContext(), AdminDashboard.class);
                             startActivity(i);
                         }
                     }
