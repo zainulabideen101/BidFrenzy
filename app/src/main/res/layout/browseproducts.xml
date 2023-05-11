@@ -9,8 +9,8 @@
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/imageBack"
-        android:layout_width="95dp"
-        android:layout_height="91dp"
+        android:layout_width="67dp"
+        android:layout_height="63dp"
         android:layout_marginTop="4dp"
         android:clickable="true"
         android:onClick="BackArrowC"
@@ -23,4 +23,18 @@
         android:layout_height="641dp"
         android:layout_below="@+id/imageBack"
         android:layout_marginTop="-4dp" />
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/idAddFAB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/background1"
+        android:src="@drawable/ic_add_2"
+        app:tint="@color/white" />
 </RelativeLayout>
