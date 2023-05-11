@@ -162,38 +162,6 @@ public class AdminBrowseProducts extends AppCompatActivity implements ProductRVA
             public void onClick(View view) {
                 Intent i = new Intent(AdminBrowseProducts.this, ReviewSeller.class);
                 startActivity(i);
-               /* DocumentReference CartList = db.collection("Users").document(fAuth.getUid()).collection("CartList").document();
-                ProductRVModal item = productRVModalArrayList.get(position);
-                HashMap<String,Object> map = new HashMap<>();
-                map.put("productName", item.getProductName());
-                map.put("productPrice", item.getProductPrice());
-                map.put("productCategory", item.getProductCategory());
-                map.put("productImage", item.getProductImage());
-                map.put("productDescription", item.getProductDescription());
-                map.put("productID", item.getProductID());
-
-
-                CartList.set(map).addOnCompleteListener(new OnCompleteListener<Void>() {
-                    @Override
-                    public void onComplete(@NonNull Task<Void> task) {
-                        String id= CartList.getId();
-                        String price= item.getProductPrice();
-                        Toast.makeText(AdminBrowseProducts.this, "Add To Cart Successful", Toast.LENGTH_SHORT).show();
-                        Bundle bundle = new Bundle();
-                        Intent i = new Intent(AdminBrowseProducts.this,AddToCart.class);
-                        bundle.putString("OrderID",id);
-                        bundle.putString("productPrice",price);
-                        i.putExtras(bundle);
-                        startActivity(i);
-                    }
-                }).addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                        Toast.makeText(AdminBrowseProducts.this, "Failed to Add Product", Toast.LENGTH_SHORT).show();
-                    }
-                });
-
-                */
             }
         });
 
