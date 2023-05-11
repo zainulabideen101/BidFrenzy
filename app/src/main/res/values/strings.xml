@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">CPmarkett</string>
+    <string name="my_wallet">My Wallet</string>
+    <string name="james_thomas">User Name</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="Payment">Payment</string>
+    <string name="browse">Browse Category</string>
+    <string name="eur">EUR</string>
+    <string name="FName">Full Name</string>
+    <string name="Phone">Phone</string>
+    <string name="Email">Email</string>
+    <string name="option1">Account Settings</string>
+    <string name="option_4">Browse Category</string>
+    <string name="option_2">Recommend Systems</string>
+    <string name="option_3">Pre Build Systems</string>
+    <string name="option_6">Pending Orders</string>
+    <string name="option_5">Accepted Orders</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="change_pw">Change Password</string>
+</resources>

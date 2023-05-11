@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".Payment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/headerbar">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageBack"
+            android:layout_width="20dp"
+            android:layout_height="20dp"        android:layout_marginTop="4dp"
+            android:src="@drawable/ic_back"
+            android:clickable="true"
+            android:onClick="BackArrow"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/text_or_icon"
+            />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageSearch"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="4dp"
+            android:src="@drawable/ic_dashboard"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/text_or_icon"/>
+        <TextView
+            android:id="@+id/textTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"        android:text="@string/Payment"
+            android:textAlignment="center"
+            android:textColor="@color/text_or_icon"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@id/imageBack"
+            app:layout_constraintEnd_toStartOf="@id/imageSearch"
+            app:layout_constraintHorizontal_bias="0.085"
+            app:layout_constraintStart_toEndOf="@id/imageBack"
+            app:layout_constraintTop_toTopOf="@id/imageBack"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/payment1"
+        android:paddingTop="5sp"
+        android:layout_below="@+id/headerbar"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:src="@drawable/logo"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/payment1"
+        android:id="@+id/payment2"
+        android:paddingTop="18dp">
+
+        <TextView
+            android:id="@+id/accnumber"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/payment1"
+            android:textStyle="bold"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="4dp"
+            android:padding="3dp"
+            android:text="Account Number: "
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+        <TextView
+            android:id="@+id/accnumber1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/accnumber"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="4dp"
+            android:padding="3dp"
+            android:text="03000677889"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/payment2"
+        android:id="@+id/payment3">
+        <TextView
+            android:id="@+id/accname"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/accnumber"
+            android:textStyle="bold"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="4dp"
+            android:padding="3dp"
+            android:text="Account Name: "
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+        <TextView
+            android:id="@+id/accname1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/accname"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="4dp"
+            android:padding="3dp"
+            android:text="CounterPanda Market  "
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="18sp"
+        android:layout_below="@id/payment3"
+        android:id="@+id/payment4">
+
+        <EditText
+            android:id="@+id/TRXID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/text_round"
+            android:importantForAutofill="no"
+            android:hint="Enter Transaction ID"
+            android:inputType="text"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:padding="15dp"
+            android:textColor="#FFFF"
+            android:textColorHint="#FFFF"
+            />
+
+        <EditText
+            android:id="@+id/AddressDescription"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@drawable/text_round"
+            android:importantForAutofill="no"
+            android:hint="Address Information"
+            android:singleLine="false"
+            android:inputType="textMultiLine|textImeMultiLine"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:padding="15dp"
+            android:textColor="#FFFF"
+            android:textColorHint="#FFFF"
+            />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="20dp"
+            android:text="Place Order"
+            android:textAllCaps="false"
+            android:background="@drawable/edit_round"
+            android:layout_marginBottom="10dp"
+            android:id="@+id/BtnPlaceOrder"/>
+    </LinearLayout>
+
+</RelativeLayout>

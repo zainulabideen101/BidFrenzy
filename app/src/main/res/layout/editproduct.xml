@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".EditProduct">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/ProductName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/text_round"
+                android:importantForAutofill="no"
+                android:hint="Product Name"
+                android:inputType="text"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:padding="15dp"
+                android:textColor="#FFFF"
+                android:textColorHint="#FFFF"
+                />
+
+            <EditText
+                android:id="@+id/ProductCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/text_round"
+                android:importantForAutofill="no"
+                android:hint="Product Category"
+                android:inputType="text"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:padding="15dp"
+                android:textColor="#FFFF"
+                android:textColorHint="#FFFF"
+                />
+
+            <EditText
+                android:id="@+id/ProductPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/text_round"
+                android:importantForAutofill="no"
+                android:hint="Product Price"
+                android:inputType="text"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:padding="15dp"
+                android:textColor="#FFFF"
+                android:textColorHint="#FFFF"
+                />
+
+            <EditText
+                android:id="@+id/ProductImageLink"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/text_round"
+                android:importantForAutofill="no"
+                android:hint="Product Image Link"
+                android:inputType="text"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:padding="15dp"
+                android:textColor="#FFFF"
+                android:textColorHint="#FFFF"
+                />
+
+            <EditText
+                android:id="@+id/ProductDescription"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@drawable/text_round"
+                android:importantForAutofill="no"
+                android:hint="Product Description"
+                android:singleLine="false"
+                android:inputType="textMultiLine|textImeMultiLine"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:padding="15dp"
+                android:textColor="#FFFF"
+                android:textColorHint="#FFFF"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:weightSum="2"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/BtnUpdateProduct"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:layout_weight="1"
+                    android:text="Update \nProduct"
+                    android:textColor="@color/text_or_icon"
+                    android:textAllCaps="false"
+                    android:background="@drawable/edit_round"
+                    />
+                <Button
+                    android:id="@+id/BtnDeleteProduct"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:layout_weight="1"
+                    android:text="Delete \nProduct"
+                    android:textColor="@color/text_or_icon"
+                    android:textAllCaps="false"
+                    android:background="@drawable/edit_round"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/PBloading"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:indeterminate="true"
+            android:visibility="gone"/>
+
+
+    </RelativeLayout>
+
+</ScrollView>

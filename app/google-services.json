@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "246201765157",
+    "project_id": "bidfrenzy",
+    "storage_bucket": "bidfrenzy.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:246201765157:android:dfd92110f677c1d2041ecc",
+        "android_client_info": {
+          "package_name": "com.example.bidfrenzy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "246201765157-o2sps09g51jbpsmemlgktfvrnnl4k4qd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDm2xjP1tOYmK91kYn6zv90c27IzH5jT9s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "246201765157-o2sps09g51jbpsmemlgktfvrnnl4k4qd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

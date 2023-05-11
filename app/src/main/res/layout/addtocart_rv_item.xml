@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_row="0"
+    android:layout_column="0"
+    android:layout_gravity="fill"
+    android:layout_rowWeight="0.8"
+    android:layout_columnWeight="1.5"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="8dp"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cartsheet"
+        android:background="@color/background">
+        <TextView
+            android:id="@+id/idTVProductName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Product Name"
+            android:layout_toRightOf="@id/idIVCart"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_margin="4dp"
+            android:padding="4dp"
+            android:textSize="15dp"/>
+
+        <ImageView
+            android:id="@+id/idIVCart"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerVertical="true"
+            android:layout_margin="4dp"
+            android:padding="4dp"
+            android:src="@mipmap/ic_launcher"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:id="@+id/NameView"
+            android:layout_height="1dp"
+            android:layout_toRightOf="@id/idIVCart"
+            android:layout_below="@id/idTVProductName"
+            />
+
+
+        <TextView
+            android:id="@+id/idTVCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/NameView"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="4dp"
+            android:layout_toRightOf="@id/idIVCart"
+            android:padding="3dp"
+            android:text="Category"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Price"
+            android:id="@+id/idTVProductPrice"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_toRightOf="@id/idIVCart"
+            android:layout_below="@id/idTVCategory"
+            android:padding="3dp"
+            android:layout_margin="4dp"/>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
